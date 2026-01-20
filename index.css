@@ -977,6 +977,7 @@ body {
 @media (max-width: 768px) {
 
     .nav-links {
+        display: flex;
         position: fixed;
         top: 80px;
         right: -100%;
@@ -1011,6 +1012,12 @@ body {
         width: 100%;
         padding: 16px 12px;
         border-radius: 0;
+        color: var(--text-primary);
+        font-size: 1.1rem;
+    }
+
+    .nav-link:hover {
+        background: rgba(124, 77, 255, 0.2);
     }
 
     .nav-cta {

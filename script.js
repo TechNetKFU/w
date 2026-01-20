@@ -112,12 +112,12 @@ departmentSelect?.addEventListener('change', function () {
 
         if (selectedDept === 'Creatives') {
             // Creatives: only VP and Member
-            roleSelect.innerHTML += '<option value="نائب رئيس">نائب رئيس</option>';
+            roleSelect.innerHTML += '<option value="نائب قائد">نائب قائد</option>';
             roleSelect.innerHTML += '<option value="عضو عادي">عضو عادي</option>';
         } else if (selectedDept === 'TechNet Academy') {
             // TechNet Academy: Leader, VP, and Member
-            roleSelect.innerHTML += '<option value="رئيس">رئيس</option>';
-            roleSelect.innerHTML += '<option value="نائب رئيس">نائب رئيس</option>';
+            roleSelect.innerHTML += '<option value="قائد">قائد</option>';
+            roleSelect.innerHTML += '<option value="نائب قائد">نائب قائد</option>';
             roleSelect.innerHTML += '<option value="عضو عادي">عضو عادي</option>';
         }
     }

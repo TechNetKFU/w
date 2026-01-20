@@ -186,21 +186,7 @@ function submitToGoogleForms(data) {
 
     console.log('📤 Submit URL:', submitUrl);
 
-    // Method 1: Use fetch with no-cors mode
-    fetch(submitUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: params
-    }).then(() => {
-        console.log('✅ Form submitted successfully');
-    }).catch(error => {
-        console.log('⚠️ Fetch error (normal for cross-origin):', error);
-    });
-
-    // Method 2: Backup - Use hidden iframe as fallback
+    // Submit using iframe (most reliable for cross-origin)
     const iframe = document.createElement('iframe');
     iframe.name = 'hidden_iframe_' + Date.now();
     iframe.style.display = 'none';
@@ -221,6 +207,7 @@ function submitToGoogleForms(data) {
 
     document.body.appendChild(form);
     form.submit();
+    console.log('✅ Form submitted successfully');
 
     // Cleanup
     setTimeout(() => {

@@ -106,6 +106,20 @@ departmentSelect?.addEventListener('change', function () {
     if (selectedDept === 'Creatives' || selectedDept === 'TechNet Academy') {
         roleGroup.style.display = 'block';
         roleSelect.setAttribute('required', 'required');
+
+        // Update role options based on department
+        roleSelect.innerHTML = '<option value="">اختر المنصب</option>';
+
+        if (selectedDept === 'Creatives') {
+            // Creatives: only VP and Member
+            roleSelect.innerHTML += '<option value="نائب رئيس">نائب رئيس</option>';
+            roleSelect.innerHTML += '<option value="عضو عادي">عضو عادي</option>';
+        } else if (selectedDept === 'TechNet Academy') {
+            // TechNet Academy: Leader, VP, and Member
+            roleSelect.innerHTML += '<option value="رئيس">رئيس</option>';
+            roleSelect.innerHTML += '<option value="نائب رئيس">نائب رئيس</option>';
+            roleSelect.innerHTML += '<option value="عضو عادي">عضو عادي</option>';
+        }
     }
 
     // Show portfolio upload for Designers

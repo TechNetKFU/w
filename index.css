@@ -714,17 +714,20 @@ body {
     color: var(--text-muted);
 }
 
-.org-deputy.vacant {
+.org-deputy.vacant,
+.org-leader.vacant {
     background: rgba(255, 255, 255, 0.02);
     border: 1px dashed var(--glass-border);
 }
 
-.org-deputy.vacant .org-avatar-small {
+.org-deputy.vacant .org-avatar-small,
+.org-leader.vacant .org-avatar-small {
     background: var(--glass-bg);
     border: 2px dashed var(--glass-border);
 }
 
-.org-deputy.vacant h4 {
+.org-deputy.vacant h4,
+.org-leader.vacant h4 {
     color: var(--text-muted);
     font-style: italic;
 }
